@@ -1,0 +1,169 @@
+body {
+    background-color: rgb(70, 18, 32);
+
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    width: 180px;
+    height: 50px;
+    color: rgb(70, 18, 32);
+    background-color: rgb(252, 185, 178);
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+p {
+    text-align: justify;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: auto;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    min-height: 100vh;
+}
+
+.about-me-front,
+.about-me-back,
+.my-projects,
+.contact-me,
+.testCard {
+    display: flex;
+    flex-direction: column;
+
+    width: 300px;
+    height: 400px;
+    border-radius: 3px;
+    background-color: rgb(178, 58, 72);
+    box-shadow: 5px 0px 8px rgba(0, 0, 0, 0.8);
+}
+
+.about-me {
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    transform-origin: center;
+
+    .text-box {
+        display: flex;
+        flex-direction: column;
+
+        text-align: center;
+
+        .top {
+            display: flex;
+            flex-direction: row;
+            margin: 20px;
+        }
+    }
+
+    .button-box {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-self: center;
+        justify-content: center;
+    }
+}
+
+.about-me-front,
+.about-me-back {
+    backface-visibility: hidden;
+}
+
+.about-me-back {
+    transform: rotateX(180deg);
+}
+
+.about-me-flipped {
+    transform: rotateX(180deg);
+}
+
+.my-projects {
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    transform-origin: center;
+
+    .button-box {
+        display: flex;
+        flex-direction: column;
+
+        height: 240px;
+
+        align-items: center;
+
+        .graduates {
+            margin: auto;
+        }
+
+        .grades {
+            margin: auto;
+        }
+
+        .lexer {
+            margin: auto;
+        }
+    }
+}
+
+.contact-me {
+    .text-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.title-box {
+    display: flex;
+    justify-content: center;
+    flex-basis: 40%;
+
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 180px;
+        height: 75px;
+        font-size: 20px;
+        color: rgb(254, 208, 187);
+        background-color: rgb(140, 47, 57);
+        border-radius: 10px;
+        margin: auto;
+
+        text-align: center;
+        vertical-align: middle;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: space-evenly;
+
+        min-height: 100vh;
+    }
+
+    .my-projects {
+        margin-bottom: 200px;
+    }
+
+    .contact-me {
+        margin: 200px;
+    }
+}
